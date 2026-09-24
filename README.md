@@ -47,3 +47,7 @@ The executable is created in `downloads/YARIS.exe`.
 - Soundtrack: [Why's This Dealer?](https://soundcloud.com/user-820028958/niko-b-whys-this-dealer) by Niko B
 - Gif : [Yaris Gif](https://tenor.com/pl/view/toyota-yaris-gif-159930250860655829) on Tenor 
 
+<h1 align="center">Have fun</h1>
+
+<p align="center">- G33K</p>
+
