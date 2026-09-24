@@ -45,7 +45,7 @@ The executable is created in `dist/YARIS.exe`.
 
 ## Credits
 
-- Soundtrack: Nico B
+- Soundtrack: [Why's This Dealer?](https://soundcloud.com/user-820028958/niko-b-whys-this-dealer) by Niko B
 
 ## License
 

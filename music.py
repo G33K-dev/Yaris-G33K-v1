@@ -9,7 +9,10 @@ print("music")
 
 signal.signal(signal.SIGINT, signal.SIG_IGN)
 
-MUSIC_CREDIT = "Music by Nico B"
+MUSIC_TITLE = "Why's This Dealer?"
+MUSIC_ARTIST = "Niko B"
+MUSIC_URL = "https://soundcloud.com/user-820028958/niko-b-whys-this-dealer"
+MUSIC_CREDIT = f"Soundtrack: {MUSIC_TITLE} - {MUSIC_ARTIST}"
 
 
 def get_resource(relative_path):

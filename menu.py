@@ -65,7 +65,11 @@ def _show_big_menu():
 
    layout = QVBoxLayout(_big_menu)
    layout.addWidget(QLabel("YARIS options"))
-   layout.addWidget(QLabel(music.MUSIC_CREDIT))
+   soundtrack_label = QLabel(
+      f'<a href="{music.MUSIC_URL}">{music.MUSIC_CREDIT}</a>'
+   )
+   soundtrack_label.setOpenExternalLinks(True)
+   layout.addWidget(soundtrack_label)
 
    volume_label = QLabel("Volume: 100%")
    layout.addWidget(volume_label)
