@@ -50,3 +50,7 @@ The executable is created in `dist/YARIS.exe`.
 ## License
 
 Released under the [MIT License](LICENSE).
+
+<h1 align="center">APP BY G33K</h1>
+
+<h2 align="center"><i>HAVE FUN</i></h2>
