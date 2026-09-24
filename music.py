@@ -9,6 +9,8 @@ print("music")
 
 signal.signal(signal.SIGINT, signal.SIG_IGN)
 
+MUSIC_CREDIT = "Music by Nico B"
+
 
 def get_resource(relative_path):
     if hasattr(sys, "_MEIPASS"):

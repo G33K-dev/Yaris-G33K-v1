@@ -11,7 +11,7 @@ from PyQt5.QtWidgets import (
    QVBoxLayout,
 )
 
-import website.Yaris.music as music
+import music
 
 
 _menu = None
@@ -65,6 +65,7 @@ def _show_big_menu():
 
    layout = QVBoxLayout(_big_menu)
    layout.addWidget(QLabel("YARIS options"))
+   layout.addWidget(QLabel(music.MUSIC_CREDIT))
 
    volume_label = QLabel("Volume: 100%")
    layout.addWidget(volume_label)
