@@ -7,7 +7,6 @@ A small Toyota Yaris desktop companion for Windows. YARIS displays an animated c
 - Frameless, draggable animated Yaris window
 - Right-click menu for volume controls and exit
 - Standalone Windows executable build
-- MIT licensed
 
 ## Run From Source
 
@@ -18,24 +17,24 @@ A small Toyota Yaris desktop companion for Windows. YARIS displays an animated c
 	pip install PyQt5 pygame
 	```
 
-3. Start the app:
+3. Start the app from the repository root:
 
 	```powershell
-	python initalize.py
+	python ToyotAPP\initalize.py
 	```
 
-Keep `yaris.gif` and `yaris.mp3` beside the Python files when running from source.
+The Python files and runtime assets live together in `ToyotAPP`.
 
 ## Build The Windows App
 
-Install PyInstaller and build the single-file executable:
+Install PyInstaller and build the single-file executable into `downloads`:
 
 ```powershell
 pip install pyinstaller
-pyinstaller --clean --noconfirm --onefile --windowed --name YARIS --icon yaris.ico --add-data "yaris.gif;." --add-data "yaris.mp3;." initalize.py
+pyinstaller --clean --noconfirm --onefile --windowed --name YARIS --distpath downloads --workpath build --specpath build --icon ToyotAPP\yaris.ico --add-data "ToyotAPP\yaris.gif;." --add-data "ToyotAPP\yaris.mp3;." ToyotAPP\initalize.py
 ```
 
-The executable is created in `dist/YARIS.exe`.
+The executable is created in `downloads/YARIS.exe`.
 
 ## Links
 
@@ -48,13 +47,3 @@ The executable is created in `dist/YARIS.exe`.
 - Soundtrack: [Why's This Dealer?](https://soundcloud.com/user-820028958/niko-b-whys-this-dealer) by Niko B
 - Gif : [Yaris Gif](https://tenor.com/pl/view/toyota-yaris-gif-159930250860655829) on Tenor 
 
-## License
-
-Released under the [MIT License](LICENSE).
-
-
-<h1 align="center"><i>HAVE FUN</i></h1>
-
-<p align="center">
-	<img src="g33k-mark.svg" alt="G33K" width="680">
-</p>
