@@ -54,3 +54,7 @@ Released under the [MIT License](LICENSE).
 <h1 align="center">APP BY G33K</h1>
 
 <h2 align="center"><i>HAVE FUN</i></h2>
+
+<p align="center">
+	<img src="g33k-mark.svg" alt="G33K" width="680">
+</p>
