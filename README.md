@@ -52,7 +52,7 @@ The executable is created in `dist/YARIS.exe`.
 Released under the [MIT License](LICENSE).
 
 
-<h2 align="center"><i>HAVE FUN</h1>
+<h1 align="center"><i>HAVE FUN</i></h1>
 
 <p align="center">
 	<img src="g33k-mark.svg" alt="G33K" width="680">
