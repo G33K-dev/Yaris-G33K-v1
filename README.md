@@ -36,9 +36,9 @@ pyinstaller --clean --noconfirm --onefile --windowed --name YARIS --distpath dow
 
 The executable is created in `downloads/YARIS.exe`.
 
-## Donwload Latest Relese from website [Yaris download] (https://yaris-dev.vercel.app)
+## Donwload Latest Relese from website [Yaris download](https://yaris-dev.vercel.app)
 
-## Check Releses [Releses] (https://github.com/G33K-dev/Yaris-G33K-v1/releases)
+## Check Releses [Releses](https://github.com/G33K-dev/Yaris-G33K-v1/releases)
 
 ## Links
 
