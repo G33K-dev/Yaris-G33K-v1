@@ -42,7 +42,7 @@ The executable is created in `downloads/YARIS.exe`.
 
 ## Latest Release
 
-- `v1.1.0` adds an optional DVD screensaver-style bounce, started from the right-click menu.
+- `v2.0.0` adds an optional DVD screensaver-style bounce, started from the right-click menu.
 - [Download YARIS for Windows](https://yaris-dev.vercel.app/downloads/YARIS.exe)
 - [View all GitHub releases](https://github.com/G33K-dev/Yaris-G33K-v1/releases)
 
