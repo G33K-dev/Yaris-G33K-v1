@@ -1,21 +1,50 @@
-# ToyotAPP
+# YARIS
 
-YARIS is a small animated Toyota Yaris companion for the Windows desktop.
+A small Toyota Yaris desktop companion for Windows. YARIS displays an animated car on the desktop and plays its soundtrack in the background.
 
-## Run
+## Features
 
-From the repository root:
+- Frameless, draggable animated Yaris window
+- Right-click menu for volume controls and exit
+- Optional DVD screensaver-style bouncing mode
+- Standalone Windows executable build
+
+## Run From Source
+
+1. Install Python 3.10 or newer.
+2. Install the dependencies:
+
+	```powershell
+	pip install PyQt5 pygame
+	```
+
+3. Start the app from the repository root:
+
+	```powershell
+	python ToyotAPP\initalize.py
+	```
+
+The Python files and runtime assets live together in `ToyotAPP`.
+
+## Build The Windows App
+
+Install PyInstaller and build the single-file executable into `downloads`:
 
 ```powershell
-python ToyotAPP\initalize.py
+pip install pyinstaller
+pyinstaller --clean --noconfirm --onefile --windowed --name YARIS --distpath downloads --workpath build --specpath build --icon ToyotAPP\yaris.ico --add-data "ToyotAPP\yaris.gif;." --add-data "ToyotAPP\yaris.mp3;." ToyotAPP\initalize.py
 ```
 
-## Contents
+The executable is created in `downloads/YARIS.exe`.
 
-- `initalize.py` starts the app.
-- `gif.py` displays the draggable animated car.
-- `menu.py` provides the right-click controls.
-- `music.py` manages the soundtrack.
-- `yaris.gif`, `yaris.mp3`, and `yaris.ico` are runtime assets.
+## Links
 
-The packaged Windows executable is kept separately in `downloads/YARIS.exe`.
+- [Project source](https://github.com/G33K-dev/Yaris-G33K-v1)
+- [Releases](https://github.com/G33K-dev/Yaris-G33K-v1/releases)
+- [Issues](https://github.com/G33K-dev/Yaris-G33K-v1/issues)
+
+## Credits
+
+- Soundtrack: [Why's This Dealer?](https://soundcloud.com/user-820028958/niko-b-whys-this-dealer) by Niko B
+- Gif : [Yaris Gif](https://tenor.com/pl/view/toyota-yaris-gif-159930250860655829) on Tenor
+

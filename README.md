@@ -6,6 +6,7 @@ A small Toyota Yaris desktop companion for Windows. YARIS displays an animated c
 
 - Frameless, draggable animated Yaris window
 - Right-click menu for volume controls and exit
+- Optional DVD screensaver-style bouncing mode
 - Standalone Windows executable build
 
 ## Run From Source
@@ -31,13 +32,22 @@ Install PyInstaller and build the single-file executable into `downloads`:
 
 ```powershell
 pip install pyinstaller
-pyinstaller --clean --noconfirm --onefile --windowed --name YARIS --distpath downloads --workpath build --specpath build --icon ToyotAPP\yaris.ico --add-data "ToyotAPP\yaris.gif;." --add-data "ToyotAPP\yaris.mp3;." ToyotAPP\initalize.py
+$gif = (Resolve-Path "ToyotAPP\yaris.gif").Path
+$music = (Resolve-Path "ToyotAPP\yaris.mp3").Path
+$icon = (Resolve-Path "ToyotAPP\yaris.ico").Path
+pyinstaller --clean --noconfirm --onefile --windowed --name YARIS --distpath downloads --workpath build --specpath build --icon $icon --add-data "$gif;." --add-data "$music;." ToyotAPP\initalize.py
 ```
 
 The executable is created in `downloads/YARIS.exe`.
 
+## Latest Release
+
+- `v1.1.0` adds an optional DVD screensaver-style bounce, started from the right-click menu.
+
 ## Links
 
+- [Website](https://yaris-dev.vercel.app/)
+- [Download YARIS for Windows](https://yaris-dev.vercel.app/downloads/YARIS.exe)
 - [Project source](https://github.com/G33K-dev/Yaris-G33K-v1)
 - [Releases](https://github.com/G33K-dev/Yaris-G33K-v1/releases)
 - [Issues](https://github.com/G33K-dev/Yaris-G33K-v1/issues)

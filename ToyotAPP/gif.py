@@ -55,7 +55,7 @@ class desktop_gif_widget(QWidget):
 
     def mousePressEvent(self, event):
         if event.button() == Qt.RightButton:
-            menu.show()
+            menu.show(self)
             event.accept()
         elif event.button() == Qt.LeftButton:
             self.drag_position = event.globalPos() - self.frameGeometry().topLeft()
@@ -81,8 +81,23 @@ def create_viewer():
     gif_viewer = desktop_gif_widget("yaris.gif")
     gif_viewer.show()
     return gif_viewer
+def bounce(gif_viewer):
+    if not hasattr(gif_viewer, "dx"):
+        gif_viewer.dx = 4
+        gif_viewer.dy = 3
+    x = gif_viewer.x() + gif_viewer.dx
+    y = gif_viewer.y() + gif_viewer.dy
 
+    screen = gif_viewer.screen().availableGeometry()
+    if x <= screen.left() or x + gif_viewer.width() >= screen.right():
+        gif_viewer.dx *= -1
+        x = gif_viewer.x() + gif_viewer.dx
 
+    if y <= screen.top() or y + gif_viewer.height() >= screen.bottom():
+        gif_viewer.dy *= -1
+        y = gif_viewer.y() + gif_viewer.dy
+
+    gif_viewer.move(x, y)
 def start():
     app = QApplication.instance() or QApplication(sys.argv)
     gif_viewer = create_viewer()

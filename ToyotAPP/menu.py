@@ -1,4 +1,4 @@
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtWidgets import (
    QAction,
    QApplication,
@@ -11,6 +11,7 @@ from PyQt5.QtWidgets import (
    QVBoxLayout,
 )
 
+import gif
 import music
 
 
@@ -20,6 +21,17 @@ _big_menu = None
 
 def _quit():
    QApplication.quit()
+
+def start_bounce(gif_viewer):
+   timer = getattr(gif_viewer, "bounce_timer", None)
+   if timer is not None and timer.isActive():
+      return
+
+   timer = QTimer(gif_viewer)
+   timer.setInterval(16)
+   timer.timeout.connect(lambda: gif.bounce(gif_viewer))
+   gif_viewer.bounce_timer = timer
+   timer.start()
 
 
 def _show_big_menu():
@@ -110,7 +122,7 @@ def _show_big_menu():
    _big_menu.show()
 
 
-def show():
+def show(gif_viewer=None):
    """Show the application menu at the current cursor position."""
    global _menu
 
@@ -159,6 +171,14 @@ def show():
    mute_action.triggered.connect(music.mute)
    _menu.addAction(mute_action)
 
+   bounce_action = QAction("Start bouncing", _menu)
+   bounce_action.setEnabled(gif_viewer is not None)
+   if gif_viewer is not None:
+      bounce_action.triggered.connect(
+         lambda: start_bounce(gif_viewer)
+      )
+   _menu.addAction(bounce_action)
+
    more_options_action = QAction("More options...", _menu)
    more_options_action.triggered.connect(_show_big_menu)
    _menu.addAction(more_options_action)
@@ -169,4 +189,3 @@ def show():
    _menu.addAction(quit_action)
 
    _menu.popup(QApplication.desktop().cursor().pos())
-
