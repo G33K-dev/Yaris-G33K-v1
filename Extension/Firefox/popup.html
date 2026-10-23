@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YARIS Screensaver</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>YARIS Screensaver</h1>
+      <p>Start the bouncing Yaris after this much time without input.</p>
+      <form id="settings-form">
+        <label for="idle-minutes">Idle time (minutes)</label>
+        <input id="idle-minutes" name="idleMinutes" type="number"
+          min="1" max="1440" step="1" required>
+        <button type="submit">Save</button>
+        <output id="status" aria-live="polite"></output>
+      </form>
+      <p class="note">The Yaris bounces on the current webpage and stops when you interact with it.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

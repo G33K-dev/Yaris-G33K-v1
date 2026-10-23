@@ -7,6 +7,7 @@ A small Toyota Yaris desktop companion for Windows. YARIS displays an animated c
 - Frameless, draggable animated Yaris window
 - Right-click menu for volume controls and exit
 - Optional DVD screensaver-style bouncing mode
+- Chrome, Opera, and Firefox extensions that start the bouncing Yaris after a configurable idle time
 - Standalone Windows executable build
 
 ## Run From Source
@@ -25,6 +26,12 @@ A small Toyota Yaris desktop companion for Windows. YARIS displays an animated c
 	```
 
 The Python files and runtime assets live together in `ToyotAPP`.
+
+## Chrome Extension
+
+The Chrome and Opera build is in `Extension`; the Firefox-specific build is in
+`Extension/Firefox`. See [`Extension/README.md`](Extension/README.md) for
+installation and packaging instructions.
 
 ## Build The Windows App
 
@@ -62,4 +69,3 @@ The executable is created in `downloads/YARIS.exe`.
 > # Have fun
 >
 > - G33K
-

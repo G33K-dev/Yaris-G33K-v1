@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "YARIS Screensaver",
+  "version": "1.0.0",
+  "description": "Let the Toyota Yaris bounce around the page after you have been idle.",
+  "permissions": ["idle", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "YARIS Screensaver",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["yaris.gif"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
